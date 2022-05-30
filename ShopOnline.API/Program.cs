@@ -17,6 +17,8 @@ builder.Services.AddDbContextPool<ShopOnlineDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ShopOnlineConnection"));
 });
 
+//Retreaving data from the database and returning data to the client blazor. We are using repository desing patern
+
 
 
 var app = builder.Build();
