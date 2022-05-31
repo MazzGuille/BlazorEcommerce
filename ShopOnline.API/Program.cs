@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using ShopOnline.API.Data;
+using ShopOnline.API.Repositories;
+using ShopOnline.API.Repositories.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +20,7 @@ builder.Services.AddDbContextPool<ShopOnlineDbContext>(options =>
 });
 
 //Retreaving data from the database and returning data to the client blazor. We are using repository desing patern
-
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 
 var app = builder.Build();

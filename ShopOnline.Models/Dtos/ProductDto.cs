@@ -11,6 +11,5 @@
         public int Qty { get; set; }
         public int CategoryId { get; set; }
 
-
     }
 }
